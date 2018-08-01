@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default function PlanItem(props){
-        const {info} = props.str
+        const {str, plan_id} = props
     return(
         <div>
-            {info}
+            {str}
+            {/* <button style={{opacity: .6}} onClick={ () => props.deletePlans(props.plan_id)}>delete</button> */}
         </div>
     )
 }

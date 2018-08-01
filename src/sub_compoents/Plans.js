@@ -7,12 +7,17 @@ class Plans extends Component {
         this.state={
         notes: []
         }
+        // this.deletePlans=this.deletePlans.bind(this);
+
     }
+
     componentDidMount(){
         let promise = axios.get('/api/Plans');
         promise.then(results =>{
+                    console.log(results.data)
             this.setState({notes: [...results.data]})
         })
+
     }
     getPlans()
     {
@@ -21,10 +26,26 @@ class Plans extends Component {
         {
         stuff.push(<Item
         Item key={i}
-        str={this.state.notes[i]} />
+        // plan_id={this.state.notes[i].plan_id}
+        str={this.state.notes[i].info} 
+        // deletePlans={this.deletePlans}
+        />
+
         )}
         return stuff;
     }
+    // deletePlans(val){
+    //     let code = val;
+    //     let promise=axios.delete('/api/plans/delete/'+code)
+    //     promise.then(results => {
+    //         console.log(results.data)
+    //         let arr = this.state.notes.slice(0);
+    //         console.log(results.data[0]);
+    //         arr.splice(results.data,1)
+    //         this.setState({
+    //         notes: arr
+    //     })
+    // })}
   render() {
     return (
       <div>
