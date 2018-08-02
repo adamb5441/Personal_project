@@ -1,0 +1,1 @@
+INSERT INTO plans (info, trip_id) VALUES ($1, $2 );
