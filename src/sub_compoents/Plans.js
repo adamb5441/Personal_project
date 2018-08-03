@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Item from './PlanItem';
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 class Plans extends Component {
     constructor(){
         super()
@@ -78,6 +79,7 @@ class Plans extends Component {
           {this.getPlans()}
           <input onChange={e => this.newInput(e.target.value)} />
           <button onClick={() => this.newPlan()}></button>
+          <Link to={'/'}>Logout</Link>
       </div>
     );
   }

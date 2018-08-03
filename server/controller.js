@@ -1,5 +1,4 @@
 module.exports={
-
     getAll:(req,res,next) =>{
     const dbInstance=req.app.get('db');
     dbInstance.getPlans()
@@ -33,7 +32,12 @@ module.exports={
     .then( data => res.status(200).send(data))
     .catch(err => {res.status(500).send({errorMessage: "can't touch this"})
     console.log(err)})
-    }
-
-
+    },
+    userData:(req, res) => {
+        if (req.session.user) {
+          res.status(200).send(req.session.user);
+        } else {
+          res.status(401).send('Get out');
+        }
+      }
 }

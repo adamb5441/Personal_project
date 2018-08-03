@@ -1,10 +1,11 @@
-// import React from 'react';
-// import {Switch , Router} from 'react-router-dom';
-// import Dashboard from './main_components/dashboard';
+import React from 'react';
+import {Switch , Route} from 'react-router-dom';
+import Dashboard from './main_components/Dashboard';
+import Login from './main_components/Login'
+export default (
+        <Switch>
+            <Route exact path='/' component={Login} />
+            <Route path='/Dashboard' component={Dashboard} />
+        </Switch>
 
-// export default (
-//     <Switch>
-//         <Router exact path ="/" component={Login} />
-//         <Router path ="/" component={} />
-//     </Switch>
-// )
+)
