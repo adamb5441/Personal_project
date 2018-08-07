@@ -14,11 +14,15 @@ class Plans extends Component {
     }
 
     componentDidMount(){
-        let promise = axios.get('/api/Plans');
+        axios.get('api/save-data').then(res =>{
+            console.log(res.data);
+        let code = res.data;
+        let promise = axios.get('/api/Plans' + code);
         promise.then(results =>{
                     console.log(results.data)
             this.setState({notes: results.data})
         })
+    })
 
     }
     update(){

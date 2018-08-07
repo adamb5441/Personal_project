@@ -5,6 +5,7 @@ import Plans from './../sub_compoents/Plans'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {updateUserData} from './../ducks/users'
+import {Link} from 'react-router-dom'
 class Dashboard extends Component {
 
   componentDidMount(){
@@ -27,15 +28,18 @@ class Dashboard extends Component {
           <div>
             <p>Account Holder: {user.name}</p>
             <p>Account email: {user.email}</p>
-            <p>Account number: {user.auth_id}</p>
+            <p>Account number: {user.profile_num}</p>
             <img src={user.picture} alt="" />
-            <a href="http://localhost:3005/api/logout"><button onClick={() => this.Logout}> </button></a>
+            <a href="http://localhost:3000/api/logout"><button onClick={() => this.Logout}> </button></a>
           </div>
         ) : (
           <p>Please log in.</p>
         )}
           <Header />
-          <Plans />
+          <Link to='/Dashboard/Trips'>Trips</Link>
+          <Link to='/Dashboard/Plans'>Plans</Link>
+          {this.props.children}
+
       </div>
     );
   }

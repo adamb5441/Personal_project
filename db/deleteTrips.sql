@@ -1,0 +1,2 @@
+DELETE FROM trips
+WHERE ID = $1
