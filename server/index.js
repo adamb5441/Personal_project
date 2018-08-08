@@ -24,15 +24,7 @@ app.use(
       saveUninitialized: false
     })
   );
-app.get('/api/Plans/:id', controller.getPlans);
-app.delete('/api/plans/delete/:id', controller.deletePlans);
-app.post('/api/plans/create', controller.createPlans);
-app.put('/api/plans/update', controller.updatePlans);
-app.get('/api/user-data', controller.userData);
-app.get('/api/Trips/:id', controller.getTrips)
-app.post('/api/Trips/create', controller.deleteTrips)
-app.delete('/api/Trips/delete/:id', controller.createTrips)
-app.get('api/save-data',controller.saveData)
+
 const port = process.env.port || 4000;
 massive(CONNECTION_STRING).then(dbInstance =>{
     app.set('db', dbInstance)
@@ -53,7 +45,6 @@ app.get('/auth/callback', async (req,res)=>{
 
     let resWithUserData= await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${resWithToken.data.access_token}`);
 
-
     const db = req.app.get('db');   
      let {sub, email, name, picture} = resWithUserData.data;
     let userFound = await db.findUser([sub]);
@@ -66,3 +57,14 @@ app.get('/auth/callback', async (req,res)=>{
         res.redirect('/#/Dashboard/Trips');
     }
 })
+
+app.get('/api/Plans/:id', controller.getPlans);
+app.delete('/api/plans/delete/:id', controller.deletePlans);
+app.post('/api/plans/create', controller.createPlans);
+app.put('/api/plans/update', controller.updatePlans);
+app.get('/api/user-data', controller.userData);
+app.get('/api/Trips/:id', controller.getTrips);
+app.post('/api/Trips/create', controller.createTrips);
+app.delete('/api/Trips/delete/:id', controller.deleteTrips);
+app.get('/api/save-data', controller.saveData);
+app.post('/api/set-save/:id', controller.setSave);

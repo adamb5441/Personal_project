@@ -10,7 +10,6 @@ export default class PlanItem extends Component{
     input(value){
         this.setState({
             userIn: value,
-            show: 0
         })
         console.log(this.state.userIn)
     }
@@ -29,7 +28,7 @@ export default class PlanItem extends Component{
 
     render() {    
         const {info , plan_id} = this.props;
-        
+        console.log('this is the render');
         const display = (
             <div>
             <input value={this.state.userIn} onChange={e => this.input(e.target.value)}/>

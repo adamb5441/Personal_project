@@ -6,6 +6,11 @@ module.exports={
           res.status(401).send('Get out');
         }
       },
+    setSave:(req,res) => {
+        const {params} = req;
+        req.session.saves = params;
+        res.status(200).send(req.session.saves)
+      },
     saveData:(req, res) => {
         if (req.session.saves) {
           res.status(200).send(req.session.saves);
@@ -14,8 +19,9 @@ module.exports={
         }
       },
     getPlans:(req,res,next) =>{
+        const {params}=req;
         const dbInstance=req.app.get('db');
-        dbInstance.getPlans()
+        dbInstance.getPlans([params.id])
         .then( data => res.status(200).send(data))
         .catch(err => {res.status(500).send({errorMessage: "YOU SHALL NOT PASS!!!!!!!!"})
         console.log(err)})
@@ -24,6 +30,7 @@ module.exports={
     deletePlans:(req,res,next) =>{
         const {params}=req
         const dbInstance= req.app.get('db')
+        console.log('delete')
         dbInstance.deletePlans([params.id])
         .then( data => res.status(200).send(data.plan_id))
         .catch(err => {res.status(500).send({errorMessage: "can't touch this"})
@@ -48,11 +55,10 @@ module.exports={
     },
     getTrips:(req,res,next) =>{
         const {params} = req;
-        console.log(params.id + " in the controller")
+        console.log(params.id + " get")
         const dbInstance=req.app.get('db');
         dbInstance.getTrips([params.id])
         .then(data =>{
-            req.session.saves = data
             res.status(200).send(data)})
         .catch(err => {res.status(500).send({errorMessage: "Nope"})
         console.log(err)})
@@ -67,10 +73,10 @@ module.exports={
         console.log(err)})
         },
     createTrips:(req,res,next) =>{
-        console.log(req.body)
-        const {str, num}=req.body
+        console.log('create trips req body', req.body)
+        const {str, img, num}=req.body
         const dbInstance= req.app.get('db')
-        dbInstance.createTrips([str, num])
+        dbInstance.createTrips([str, img, num])
         .then( data => res.status(200).send(data))
         .catch(err => {res.status(500).send({errorMessage: "pfff"})
         console.log(err)})

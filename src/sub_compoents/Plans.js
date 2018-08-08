@@ -8,6 +8,7 @@ class Plans extends Component {
         this.state={
         notes: [],
         userIn: "",
+        saveNum:0
         }
         this.deletePlans=this.deletePlans.bind(this);
         this.updatePlan=this.updatePlan.bind(this);
@@ -16,17 +17,21 @@ class Plans extends Component {
     componentDidMount(){
         axios.get('api/save-data').then(res =>{
             console.log(res.data);
-        let code = res.data;
-        let promise = axios.get('/api/Plans' + code);
+        let code = res.data.id;
+        let promise = axios.get('/api/Plans/' + code);
         promise.then(results =>{
                     console.log(results.data)
-            this.setState({notes: results.data})
+            this.setState({
+                notes: results.data,
+                saveNum: code
+            })
         })
     })
 
     }
     update(){
-        let promise = axios.get('/api/Plans');
+        let code = this.state.saveNum
+        let promise = axios.get('/api/Plans/'+ code);
         promise.then(results =>{
         console.log("update")
         this.setState({notes: results.data})
@@ -68,8 +73,9 @@ class Plans extends Component {
     }
     newPlan(){
         let str = this.state.userIn;
+        let num = this.state.saveNum;
         let promise = axios.post('/api/plans/create', 
-        {str, num: 1})
+        {str, num})
         promise.then(results =>{
             this.update()
         }).catch(err => console.log("You suck"));
