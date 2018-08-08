@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
-import {updateTripsData} from './../ducks/users'
+import {updateTripsData, updateSelected} from './../ducks/users'
 import TripItem from './../sub_compoents/TripItem'
+import {Link} from 'react-router-dom'
 export class Trips extends Component{
     constructor(){
         super()
@@ -72,17 +73,17 @@ export class Trips extends Component{
             this.update()
         });
     }
-    select(value){
+    select(value, str){
         let code = value;
         axios.post('/api/set-save/' + code).then(results => {
-            console.log('confirmed' + results)
+            this.props.updateSelected(str)
         })
     }
 
     render(){
         return(
             <div>
-                
+                    <Link to={'/'}>Logout</Link>
                   {this.display()}
                   <input onChange={e => this.newInput(e.target.value)}/>
                   <button onClick={() => this.newTrip()}>new</button>
@@ -94,7 +95,8 @@ export class Trips extends Component{
 function mapStateToProps(state) {
     return {
         trips: state.trips,
-        user: state.user
+        user: state.user,
+        selected: state.selected
     }
 }
-export default connect(mapStateToProps,{updateTripsData})(Trips);
+export default connect(mapStateToProps,{updateTripsData, updateSelected})(Trips);

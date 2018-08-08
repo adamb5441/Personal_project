@@ -23,18 +23,6 @@ class Dashboard extends Component {
     let {user} = this.props
     return (
       <div>
-        <h1>Account Information</h1>
-        {user.name ? (
-          <div>
-            <p>Account Holder: {user.name}</p>
-            <p>Account email: {user.email}</p>
-            <p>Account number: {user.profile_num}</p>
-            <img src={user.picture} alt="" />
-            <a href="http://localhost:3000/api/logout"><button onClick={() => this.Logout}> </button></a>
-          </div>
-        ) : (
-          <p>Please log in.</p>
-        )}
           <Header />
           <Link to='/Dashboard/Trips'>Trips</Link>
           <Link to='/Dashboard/Plans'>Plans</Link>
