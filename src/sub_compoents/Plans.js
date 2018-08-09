@@ -89,7 +89,7 @@ class Plans extends Component {
           {this.getPlans()}
           <input onChange={e => this.newInput(e.target.value)} />
           <button onClick={() => this.newPlan()}></button>
-          <Link to={'/'}>Logout</Link>
+          
       </div>
     );
   }

@@ -83,7 +83,6 @@ export class Trips extends Component{
     render(){
         return(
             <div>
-                    <Link to={'/'}>Logout</Link>
                   {this.display()}
                   <input onChange={e => this.newInput(e.target.value)}/>
                   <button onClick={() => this.newTrip()}>new</button>

@@ -5,7 +5,8 @@ import Plans from './../sub_compoents/Plans'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {updateUserData} from './../ducks/users'
-import {Link} from 'react-router-dom'
+import Nav from './../sub_compoents/Nav'
+import './../styles/Dashboard.css'
 class Dashboard extends Component {
 
   componentDidMount(){
@@ -14,19 +15,20 @@ class Dashboard extends Component {
          this.props.updateUserData(res.data);
     })
 }
-  Logout() {
-    axios.get('/api/logout').then(res => {
-    this.props.history.push('/#');
-    })
-  }
+
   render() {
     let {user} = this.props
     return (
       <div>
           <Header />
-          <Link to='/Dashboard/Trips'>Trips</Link>
-          <Link to='/Dashboard/Plans'>Plans</Link>
-          {this.props.children}
+          <div className="content">
+            <Nav />
+            <div className="Info">
+              <div>
+              {this.props.children}
+              </div>
+            </div>
+          </div>
 
       </div>
     );
