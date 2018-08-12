@@ -31,7 +31,7 @@ export default class PlanItem extends Component{
         console.log('this is the render');
         const display = (
             <div>
-            <input value={this.state.userIn} onChange={e => this.input(e.target.value)}/>
+            <textarea value={this.state.userIn} onChange={e => this.input(e.target.value)}/>
             <button style={{opacity: .6}} onClick={ () => this.props.updatePlan(this.state.userIn, plan_id)}>save</button>
             </div>)
         
