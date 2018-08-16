@@ -1,11 +1,25 @@
 .content {
     display: flex;
+    height: 100vh;
   
+}
+@media (max-width: 480px){
+    .content{
+        flex-direction: column-reverse;
+        height: 90vh;
+        justify-content: center;
+        align-items: center
+    }
+}
+@media (max-width: 480px){
+    
 }
 .Info{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: yellowgreen;
+    height: 100vh;
+    background-color: #ebf2fa;
+    overflow: none;
 }

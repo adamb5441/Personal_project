@@ -3,13 +3,16 @@ import { connect } from 'react-redux'
 import axios from 'axios'
 import {updateTripsData, updateSelected} from './../ducks/users'
 import TripItem from './../sub_compoents/TripItem'
+import './../App.css'
+import './../styles/Trips.css'
 import {Link} from 'react-router-dom'
 export class Trips extends Component{
     constructor(){
         super()
         this.state = {
             userIn: "",
-            profile_num: 0
+            profile_num: 0,
+            images: ""
         }
         this.deleteTrips=this.deleteTrips.bind(this);
         this.select=this.select.bind(this);
@@ -62,9 +65,14 @@ export class Trips extends Component{
             userIn: value
         })
     }
+    newInputImg(value){
+        this.setState({
+            images: value
+        })
+    }
     newTrip(){
         console.log('newtrips', this.state.profile_num)
-        let img = 'img'
+        let img = this.state.images;
         let str = this.state.userIn;
         let num = this.state.profile_num;
         let promise = axios.post('/api/Trips/create', 
@@ -83,10 +91,16 @@ export class Trips extends Component{
     render(){
         return(
             <div>
-                  {this.display()}
-                  <input onChange={e => this.newInput(e.target.value)}/>
-                  <button onClick={() => this.newTrip()}>new</button>
+                <div className='display'>
+                    {this.display()}
+                </div>
+
+                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInput(e.target.value)} />
+                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInputImg(e.target.value)} />
+                    <button className='myButton2' onClick={() => this.newTrip()}>new</button>
+
             </div>
+
         )
     }
 }

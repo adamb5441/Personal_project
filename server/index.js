@@ -68,3 +68,6 @@ app.post('/api/Trips/create', controller.createTrips);
 app.delete('/api/Trips/delete/:id', controller.deleteTrips);
 app.get('/api/save-data', controller.saveData);
 app.post('/api/set-save/:id', controller.setSave);
+app.get('/api/dates/:id', controller.getDates);
+app.post('/api/dates/create', controller.createDates);
+app.delete('/api/dates/delete/:id', controller.deleteDates);

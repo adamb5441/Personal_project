@@ -15,7 +15,7 @@ class Plans extends Component {
     }
 
     componentDidMount(){
-        axios.get('api/save-data').then(res =>{
+        axios.get('/api/save-data').then(res =>{
             console.log(res.data);
         let code = res.data.id;
         let promise = axios.get('/api/Plans/' + code);

@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 .App {
-  text-align: center;
+  font-family: Oswald;
 }
 
 .App-logo {
@@ -8,10 +9,10 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 80px;
+  background-color: #679436;
+  height: 50px;
   padding: 20px;
-  color: white;
+  color: #ebf2fa;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,4 +29,19 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.box {
+  background-color: #cdcdcd;
+}
+.font{
+  font-family: Oswald;
+}
+.myButton2{
+  background-color:  #427aa1;
+  opacity: .5;
+  border-radius: 10px;
+  color: #a5be00; 
+  font-size: 15px;
+  font-family: Oswald;
+
 }

@@ -73,13 +73,37 @@ module.exports={
         console.log(err)})
         },
     createTrips:(req,res,next) =>{
-        console.log('create trips req body', req.body)
         const {str, img, num}=req.body
         const dbInstance= req.app.get('db')
         dbInstance.createTrips([str, img, num])
         .then( data => res.status(200).send(data))
         .catch(err => {res.status(500).send({errorMessage: "pfff"})
         console.log(err)})
-        }
+        },    
+    getDates:(req,res,next) =>{
+            const {params}=req;
+            const dbInstance=req.app.get('db');
+            dbInstance.getDates([params.id])
+            .then( data => res.status(200).send(data))
+            .catch(err => {res.status(500).send({errorMessage: "wamp waaa"})
+            console.log(err)})
+    
+        },
+    createDates:(req,res,next) =>{
+            const {startDate, endDate, title, saveNum}=req.body
+            const dbInstance= req.app.get('db')
+            dbInstance.createDates([startDate, endDate, title, saveNum])
+            .then( data => res.status(200).send(data))
+            .catch(err => {res.status(500).send({errorMessage: "error...error"})
+            console.log(err)})
+            },
+    deleteDates:(req,res,next) =>{
+        const {params}=req
+        const dbInstance= req.app.get('db')
+        dbInstance.deleteDates([params.id])
+        .then( data => res.status(200).send(data.plan_id))
+        .catch(err => {res.status(500).send({errorMessage: "ooof"})
+        console.log(err)})
+        }    
 
 }
