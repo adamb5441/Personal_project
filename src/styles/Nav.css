@@ -3,7 +3,6 @@
     .navBar{
         flex-direction: column;
         height: 110vh;
-        /* width: 30vh */
         
     }
     .myButton{
@@ -14,7 +13,8 @@
 @media (max-width: 480px){
     .navBar{
         width: 100%;
-        height: 20vh;
+        height: 10vh;
+        position: fixed;
     }
     .myButton{
         height: 100%
@@ -23,8 +23,8 @@
 .navBar{
     display: flex;
     background-color: #05668d;
-    
-    
+    margin-top: auto;
+    bottom: 0;
 }
 .myButton{
 

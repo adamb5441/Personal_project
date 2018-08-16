@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import marker from './../images/baseline_trip_origin_black_18dp.png'
-require('dotenv').config();
+
 
 const AnyReactComponent = ({ img }) => <div>{img}</div>;
  const {REACT_APP_GOOGLE_MAPS} = process.env

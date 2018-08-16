@@ -8,9 +8,9 @@ export function header(props){
     let {user, selected} = props
     return(        
         <div className="App">
-            <div className="App-header">
+            <div className="App-header" >
               <div>
-                <image src={tree} />
+                <img src={tree} style={{width: '20px', height: '20px'}}/>
               </div>
               <div>
                   {selected ? (<p>{selected}</p>) : (<p>Please select trip</p>)}

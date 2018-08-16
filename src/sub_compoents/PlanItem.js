@@ -38,11 +38,10 @@ export default class PlanItem extends Component{
 
 
         return(
-        <div>
+        <div className='card'>
              {this.state.show===1 ? display : info }
+             <button style={{opacity: .6}} onClick={() => this.change()}>update</button>
             <button style={{opacity: .6}} onClick={ () => this.props.deletePlans(plan_id)}>delete</button>
-            <button style={{opacity: .6}} onClick={() => this.change()}>update</button>
-
         </div>
     )}
 }

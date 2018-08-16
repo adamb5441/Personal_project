@@ -6,7 +6,7 @@ const axios = require('axios')
 require('dotenv').config();
 const app = express();
 const controller = require('./controller');
-
+const path = require('path'); 
 const {
     SERVER_PORT,
     REACT_APP_DOMAIN,
@@ -15,7 +15,10 @@ const {
     SESSION_SECRET,
     CONNECTION_STRING
   } = process.env;
-
+  app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(bodyparser.json());
 app.use(
     session({

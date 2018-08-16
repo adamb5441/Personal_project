@@ -22,8 +22,8 @@ export default function TripItem(props){
                 </div>
                 <div >
 
-                    <button style={{opacity: .6}} onClick={ () => props.select(id, name)}>select</button>
-                    <button style={{opacity: .6}} onClick={ () => props.deleteTrips(id)}>delete</button>
+                    <button className='myButton2' style={{opacity: .6}} onClick={ () => props.select(id, name)}>select</button>
+                    <button className='myButton2' style={{opacity: .6}} onClick={ () => props.deleteTrips(id)}>delete</button>
 
                 </div>
             </div>

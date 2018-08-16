@@ -1,0 +1,22 @@
+
+.card2{
+    border: .5px solid black;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    
+    font-family: Oswald;
+    margin: 20px;
+    background-color: #ebf2fa;
+    text-align: center;
+}
+
+.myButton3{
+    background-color:  #427aa1;
+    opacity: .5;
+    border-radius: 10px;
+    color: #ebf2fa; 
+    font-size: 40px;
+    font-family: Oswald;
+    width: 100%
+  }

@@ -90,7 +90,7 @@ export class Trips extends Component{
 
     render(){
         return(
-            <div>
+            <div >
                 <div className='display'>
                     {this.display()}
                 </div>
