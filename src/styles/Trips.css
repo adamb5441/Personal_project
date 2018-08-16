@@ -2,6 +2,10 @@
     .display{
         flex-direction: column;
     }
+    .card{
+        width: 30%;
+        height: 10vh;
+    }
 }
 .card{
     border: .5px solid black;
@@ -13,8 +17,9 @@
     margin: 20px
 }
 .display{
-    display: flex;
+     display: flex;
     flex-wrap: wrap;
+
 }
 .App-header {
   background-color: #679436;

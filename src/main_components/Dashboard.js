@@ -19,14 +19,12 @@ class Dashboard extends Component {
   render() {
     let {user} = this.props
     return (
-      <div style={{display: 'flex', flexDirection: 'column', }}>
+      <div style={{display: 'flex', flexDirection: 'column' }}>
           <Header />
           <div className="content">
             <Nav />
-            <div className="Info">
-              <div style={{ display: 'block' }}>
+            <div className="Info">  
               {this.props.children}
-              </div>
             </div>
           </div>
 

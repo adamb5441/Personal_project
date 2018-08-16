@@ -90,14 +90,17 @@ export class Trips extends Component{
 
     render(){
         return(
-            <div >
+            <div style={{justifyContent: 'center'}} >
+                <div style={{margin: 20, display: 'flex', justifyContent: 'center'}} >
+                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInput(e.target.value)} />
+                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInputImg(e.target.value)} />
+                    <button className='myButton2' onClick={() => this.newTrip()}>new</button>
+                </div>
                 <div className='display'>
                     {this.display()}
                 </div>
 
-                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInput(e.target.value)} />
-                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInputImg(e.target.value)} />
-                    <button className='myButton2' onClick={() => this.newTrip()}>new</button>
+
 
             </div>
 
