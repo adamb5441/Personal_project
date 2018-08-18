@@ -22,7 +22,10 @@ module.exports={
         const {params}=req;
         const dbInstance=req.app.get('db');
         dbInstance.getPlans([params.id])
-        .then( data => res.status(200).send(data))
+        .then( data => {
+            console.log(data)
+            res.status(200).send(data)
+        })
         .catch(err => {res.status(500).send({errorMessage: "YOU SHALL NOT PASS!!!!!!!!"})
         console.log(err)})
 
@@ -66,8 +69,10 @@ module.exports={
         },
     deleteTrips:(req,res,next) =>{
         const {params}=req
+        let one =params.id;
+        let two =params.id;
         const dbInstance= req.app.get('db')
-        dbInstance.deleteTrips([params.id])
+        dbInstance.deleteTrips([params.id, one, two])
         .then( data => res.status(200).send(data.plan_id))
         .catch(err => {res.status(500).send({errorMessage: "ooop"})
         console.log(err)})

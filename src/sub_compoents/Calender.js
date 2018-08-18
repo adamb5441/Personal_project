@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Calendar from 'react-big-calendar';
 import moment from 'moment';
-import DatePicker from 'react-datepicker';
+import DatePicker from 'react-datepicker'; 
 import axios from 'axios' 
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import 'react-datepicker/dist/react-datepicker.css';
+import './../styles/Calender.css'
 Calendar.setLocalizer(Calendar.momentLocalizer(moment));
 class BigCalender extends Component {
     constructor(props){
@@ -89,33 +90,40 @@ class BigCalender extends Component {
         })
         console.log(val);
     }
+    checkMedia(){
+        let width = window.innerWidth;
+        console.log(width)
+          if(width > '480'){
+            return true;
+          } else{
+           return false
+          }
+    }
   render() {
     return (
-        <div>
-   
+        <div >
+                <Calendar
+                onSelectEvent={e => this.deleteDate(e)}
+                defaultView="month"
+                events={this.state.myEventsList}
+                toolbar={this.checkMedia()}
+                className='Calender'
+                />
                 <DatePicker
                     selected={this.state.startDate}
                     onChange={this.handleChangeStart}
+                    style={{ boxShadow: '.5px 1px #05668d', backgroundColor: 'black'}}
                     
                 /> 
-         
-        
                 <DatePicker
                     selected={this.state.endDate}
                     onChange={this.handleChangeEnd}
                 />
                 <input onChange={e => this.handleChangeTitle(e.target.value)} />
-                <button onClick={() => this.Add()}>
+                <button onClick={() => this.Add()} style={{width: '30px'}} >
                     Add
                 </button>  
-      
-            <Calendar
-            onSelectEvent={e => this.deleteDate(e)}
-            defaultView="month"
-            events={this.state.myEventsList}
-            style={{ height: "100vh" }}
-            
-            />
+          
         </div>
      
     );

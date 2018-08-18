@@ -19,7 +19,7 @@ class Dashboard extends Component {
   render() {
     let {user} = this.props
     return (
-      <div style={{display: 'flex', flexDirection: 'column' }}>
+      <body style={{display: 'flex', flexDirection: 'column', backgroundColor: '#ebf2fa' }}>
           <Header />
           <div className="content">
             <Nav />
@@ -28,7 +28,7 @@ class Dashboard extends Component {
             </div>
           </div>
 
-      </div>
+      </body>
     );
   }
 }

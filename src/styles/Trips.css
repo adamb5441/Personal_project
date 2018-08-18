@@ -8,17 +8,21 @@
     }
 }
 .card{
-    border: .5px solid black;
+    border: .5px solid #05668d;
+    box-shadow: .5px 1px #05668d;
     padding: 20px;
     padding-bottom: 40px;
     border-radius: 10px;
     width: 40vh;
     height: 50vh;
-    margin: 20px
+    margin: 20px;
+    color: #05668d;
 }
 .display{
      display: flex;
     flex-wrap: wrap;
+
+
 
 }
 .App-header {
@@ -29,4 +33,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.formCard{
+    border: .5px solid #05668d;
+    box-shadow: .5px 1px #05668d;
+    border: .5px solid #05668d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40vh;
+    height: 50vh;
+    margin: 20px;
+    color: #05668d;
+    padding-bottom: 40px;
+    font-family: Oswald;
 }

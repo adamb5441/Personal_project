@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import './../styles/Plans.css'
 export default class PlanItem extends Component{
         constructor(props){
             super(props)
@@ -31,17 +31,22 @@ export default class PlanItem extends Component{
         console.log('this is the render');
         const display = (
             <div>
-            <textarea value={this.state.userIn} onChange={e => this.input(e.target.value)}/>
+            <textarea style={{height: '90%', width: '100%'}} value={this.state.userIn} onChange={e => this.input(e.target.value)}/>
             <button style={{opacity: .6}} onClick={ () => this.props.updatePlan(this.state.userIn, plan_id)}>save</button>
             </div>)
         
 
 
         return(
-        <div className='card'>
+        <div className='card3'>
+            <div style={{ width: '103%'}}>
+             <button className='myButton2' style={{opacity: .6, float: 'right'}} onClick={ () => this.props.deletePlans(plan_id)}>X</button>
+            </div>
+            <div style={{height: '90%', width: '100%'}}>
              {this.state.show===1 ? display : info }
-             <button style={{opacity: .6}} onClick={() => this.change()}>update</button>
-            <button style={{opacity: .6}} onClick={ () => this.props.deletePlans(plan_id)}>delete</button>
+             </div>
+             <button className='myButton2' style={{opacity: .6, fontSize: 14}} onClick={() => this.change()}>update</button>
+            
         </div>
     )}
 }

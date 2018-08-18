@@ -7,7 +7,7 @@
     .content{
         flex-direction: column-reverse;
         
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center
     }
     .Info{
@@ -21,11 +21,11 @@
 .Info{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     background-color: #ebf2fa;
     background-size: cover;
     overflow: none;
-    min-height: 110vh
 }
 .myButton2{
     background-color:  #427aa1;

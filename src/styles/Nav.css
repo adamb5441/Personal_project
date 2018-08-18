@@ -2,7 +2,7 @@
 @media (min-width: 480px){
     .navBar{
         flex-direction: column;
-        height: 110vh;
+        height: 100vh;
         
     }
     .myButton{
@@ -14,7 +14,7 @@
     .navBar{
         width: 100%;
         height: 10vh;
-        position: fixed;
+       
     }
     .myButton{
         height: 100%
@@ -25,13 +25,14 @@
     background-color: #05668d;
     margin-top: auto;
     bottom: 0;
+    
 }
 .myButton{
-
 
     width: 100%;
     opacity: 4;
     text-decoration: none;
-    color: #ebf2fa;
+    color: #ebf2fa; 
     font-family: Oswald;
+    
 }

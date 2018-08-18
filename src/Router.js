@@ -9,7 +9,7 @@ import Maps from './sub_compoents/Maps'
 export default (
         <Switch>
             <Route exact path='/' component={Login} />
-            <Dashboard>
+            <Dashboard style={{backgroundColor: 'pink'}}>
                 <Route path='/Dashboard/Trips' component={Trips} />
                 <Route path='/Dashboard/Plans' component={Plans} />
                 <Route path='/Dashboard/Calender' component={Calender} />

@@ -17,7 +17,7 @@ export function header(props){
               </div>
                   {user.name ? (
                 <div>
-                  <img style={{height: 30, marginBottom: 0, padding: 0}} src={user.picture} alt="" />
+                  <img style={{height: 30, marginBottom: 0, padding: 0,  boxShadow: '.5px 1px #05668d'}} src={user.picture} alt="" />
                   <p style={{padding: 0, margin: 0 }}>{user.name}</p>
                 </div>
               ) : (

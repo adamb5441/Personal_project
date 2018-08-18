@@ -85,11 +85,14 @@ class Plans extends Component {
 
   render() {
     return (
-      <div>
-          {this.getPlans()}
-          <input onChange={e => this.newInput(e.target.value)} />
-          <button onClick={() => this.newPlan()}></button>
-          
+      <div >
+          <div style={{display: 'flex', justifyContent: 'center'}}>
+            <input onChange={e => this.newInput(e.target.value)} />
+            <button onClick={() => this.newPlan()}></button>
+        </div>
+          <div className='display' >
+            {this.getPlans()}
+          </div>  
       </div>
     );
   }
