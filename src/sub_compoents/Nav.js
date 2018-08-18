@@ -14,7 +14,7 @@ export default function Nav(){
         <div className="navBar">
             <div style={{width: '100%', opacity: .6}}>
                 <button className="myButton">
-                        <Link to='/Dashboard/Trips' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#022938', fontSize: '18px' }}>
+                        <Link to='/Dashboard/Trips' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
                             Trip
                             <div>
                                 <img style={{ height: '30px'}} src={suitcase} />
@@ -24,7 +24,7 @@ export default function Nav(){
             </div>
             <div style={{width: '100%', opacity: .6}}>
                 <button className="myButton">
-                    <Link to='/Dashboard/Plans' style={{display: 'block', height: '100%',textDecoration: 'none', color: '#022938', fontSize: '18px' }}>
+                    <Link to='/Dashboard/Plans' style={{display: 'block', height: '100%',textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
                     
                     Plans
                     <div>
@@ -36,7 +36,7 @@ export default function Nav(){
             </div>
             <div style={{width: '100%', opacity: .6}}>
                 <button className="myButton">
-                    <Link to='/Dashboard/Calender' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#022938', fontSize: '18px' }}>
+                    <Link to='/Dashboard/Calender' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
                         Calender
                     <div>
                         <img style={{ height: '20px'}} src={CalImg} />
@@ -46,7 +46,7 @@ export default function Nav(){
             </div>
             <div style={{width: '100%', opacity: .6}}>
                 <button className="myButton">
-                    <Link to='/Dashboard/Map' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#022938', fontSize: '18px' }}>
+                    <Link to='/Dashboard/Map' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
                         Map
                         <div>
                             <img style={{ height: '20px'}} src={mapImg} />
@@ -56,7 +56,7 @@ export default function Nav(){
             </div>
             <div style={{width: '100%', opacity: .6}}>
                 <button className="myButton" >
-                    <Link to='/' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#022938', fontSize: '18px' }}>
+                    <Link to='/' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
                         Logout
                         <div>
                         <img style={{ height: '20px'}} src={logout} />

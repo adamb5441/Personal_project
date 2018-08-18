@@ -14,3 +14,19 @@
     background-color: #ebf2fa;
     text-align: center;
 }
+.formCard2{
+    border: .5px solid #05668d;
+    box-shadow: .5px 1px #05668d;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    width: 40vh;
+    height: 25vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    word-break: break-all; 
+    word-wrap: break-word;
+    background-color: #ebf2fa;
+    text-align: center;
+}

@@ -1,11 +1,31 @@
-@media(maxmax-width: 480px){
+@media(max-width: 480px){
     .Calender{
-    height: 60vh; 
+    height: 50vh; 
     width: 50vh;
     
 }}
+
+@media(min-width: 480px){
 .Calender{
-    height: 70vh; 
-    width: 100vh;
+    height: 60vh; 
+    width: 110vh;
     
+}
+}
+.formCard3{
+    font-family: Oswald;
+    border: .5px solid #05668d;
+    box-shadow: .5px 1px #05668d;
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 28vh;
+    height: 15%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    word-break: break-all; 
+    word-wrap: break-word;
+    background-color: #ebf2fa;
+    text-align: center;
 }

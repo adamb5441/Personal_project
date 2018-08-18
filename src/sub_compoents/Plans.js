@@ -86,11 +86,11 @@ class Plans extends Component {
   render() {
     return (
       <div >
-          <div style={{display: 'flex', justifyContent: 'center'}}>
-            <input onChange={e => this.newInput(e.target.value)} />
-            <button onClick={() => this.newPlan()}></button>
-        </div>
-          <div className='display' >
+           <div className='display' >
+                <div className='formCard2' >
+                    <textarea style={{height: '30vh', backgroundColor: '#cdcdcd'}} onChange={e => this.newInput(e.target.value)} />
+                    <button className='myButton2' onClick={() => this.newPlan()}>New</button>
+                </div>
             {this.getPlans()}
           </div>  
       </div>

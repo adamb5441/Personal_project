@@ -102,27 +102,37 @@ class BigCalender extends Component {
   render() {
     return (
         <div >
-                <Calendar
-                onSelectEvent={e => this.deleteDate(e)}
-                defaultView="month"
-                events={this.state.myEventsList}
-                toolbar={this.checkMedia()}
-                className='Calender'
-                />
-                <DatePicker
-                    selected={this.state.startDate}
-                    onChange={this.handleChangeStart}
-                    style={{ boxShadow: '.5px 1px #05668d', backgroundColor: 'black'}}
+
+                <div className='formCard3'>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly'}}>
+                        <h1 style={{fontSize: '16px', marginBottom: 0}}> Set a Date</h1>
+                        <DatePicker
+                            selected={this.state.startDate}
+                            onChange={this.handleChangeStart}
+                            style={{ width: '5px'}}
+                            withPortal
+                        /> 
+
+                        <DatePicker
+                            selected={this.state.endDate}
+                            onChange={this.handleChangeEnd}
+                            withPortal
+                        />
                     
-                /> 
-                <DatePicker
-                    selected={this.state.endDate}
-                    onChange={this.handleChangeEnd}
+                    <div>
+                        <input onChange={e => this.handleChangeTitle(e.target.value)} />
+                        <button className='myButton2' onClick={() => this.Add()}  >Add</button> 
+                    </div>
+                </div>
+                </div> 
+                <Calendar
+                    style={{marginTop: '20px'}}
+                    onSelectEvent={e => this.deleteDate(e)}
+                    defaultView="month"
+                    events={this.state.myEventsList}
+                    toolbar={this.checkMedia()}
+                    className='Calender'
                 />
-                <input onChange={e => this.handleChangeTitle(e.target.value)} />
-                <button onClick={() => this.Add()} style={{width: '30px'}} >
-                    Add
-                </button>  
           
         </div>
      

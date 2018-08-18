@@ -14,7 +14,8 @@
     .navBar{
         width: 100%;
         height: 10vh;
-       
+        position: fixed;
+        opacity: 1;
     }
     .myButton{
         height: 100%

@@ -31,8 +31,8 @@ export default class PlanItem extends Component{
         console.log('this is the render');
         const display = (
             <div>
-            <textarea style={{height: '90%', width: '100%'}} value={this.state.userIn} onChange={e => this.input(e.target.value)}/>
-            <button style={{opacity: .6}} onClick={ () => this.props.updatePlan(this.state.userIn, plan_id)}>save</button>
+            <textarea style={{height: '90%', width: '100%', backgroundColor: '#cdcdcd'}} value={this.state.userIn} onChange={e => this.input(e.target.value)}/>
+            <button className='myButton2' onClick={ () => this.props.updatePlan(this.state.userIn, plan_id)}>save</button>
             </div>)
         
 

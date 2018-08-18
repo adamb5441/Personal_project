@@ -17,6 +17,7 @@
     height: 50vh;
     margin: 20px;
     color: #05668d;
+    background-color: #ebf2fa;
 }
 .display{
      display: flex;
@@ -44,6 +45,7 @@
     height: 50vh;
     margin: 20px;
     color: #05668d;
+    background-color: #ebf2fa;
     padding-bottom: 40px;
     font-family: Oswald;
 }

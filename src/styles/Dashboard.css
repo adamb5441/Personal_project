@@ -12,18 +12,22 @@
     }
     .Info{
       
-        justify-content: flex-start
+        justify-content: flex-start;
+
     }
 }
 @media (max-width: 480px){
-    
+
+    .Info{
+
+    }
 }
 .Info{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    background-color: #ebf2fa;
+    background-color: white;
     background-size: cover;
     overflow: none;
 }
