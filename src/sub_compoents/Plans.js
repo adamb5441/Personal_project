@@ -89,7 +89,7 @@ class Plans extends Component {
            <div className='display' >
                 <div className='formCard2' >
                     <textarea style={{height: '30vh', backgroundColor: '#cdcdcd'}} onChange={e => this.newInput(e.target.value)} />
-                    <button className='myButton2' onClick={() => this.newPlan()}>New</button>
+                    <button style={{height: '40px'}} className='myButton2' onClick={() => this.newPlan()}>New</button>
                 </div>
             {this.getPlans()}
           </div>  

@@ -91,16 +91,23 @@ export class Trips extends Component{
     render(){
         return(
             <div  >
-                <div className='display'>
-                <div className='formCard' style={{display: 'flex', flexDirection: 'column',justifyContent: 'center'}}>
-                    <h1 style={{ fontSize: '25px'}}>Start a new adventure!</h1>
-                    <p>Name</p>
-                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInput(e.target.value)} />
-                    <p>Image</p>
-                    <input style={{height: '20px'}} className='box font' onChange={e => this.newInputImg(e.target.value)} />
-                    <button className='myButton2' onClick={() => this.newTrip()}>new</button>
-                </div>
                 
+                <div className='formCard' style={{display: 'flex', flexDirection: 'column',justifyContent: 'center'}}>
+                    <h1 style={{ fontSize: '25px', marginBottom: '10px'}}>Start a new adventure!</h1>
+                    <div style={{display: 'flex'}}>
+                        <div>
+                            Name
+                            <input style={{height: '20px'}} className='box font' onChange={e => this.newInput(e.target.value)} />
+                        </div>
+                        <div> 
+                            Image
+                            <input style={{height: '20px'}} className='box font' onChange={e => this.newInputImg(e.target.value)} />
+                            <button className='myButton2' onClick={() => this.newTrip()}>new</button>
+                        </div> 
+                    </div>
+
+                </div>
+                <div className='display'>
                     {this.display()}
                 </div>
 

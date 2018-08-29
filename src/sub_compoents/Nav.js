@@ -12,49 +12,50 @@ export default function Nav(){
 
     return (
         <div className="navBar">
-            <div style={{width: '100%', opacity: .6}}>
-                <button className="myButton">
-                        <Link to='/Dashboard/Trips' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
-                            Trip
-                            <div>
-                                <img style={{ height: '30px'}} src={suitcase} />
-                            </div>
-                        </Link>                     
-                </button>
-            </div>
-            <div style={{width: '100%', opacity: .6}}>
-                <button className="myButton">
-                    <Link to='/Dashboard/Plans' style={{display: 'block', height: '100%',textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
-                    
-                    Plans
-                    <div>
-                        <img style={{ height: '20px'}} src={notes} />
-                    </div>                   
-                    </Link>
-  
-                </button>
-            </div>
-            <div style={{width: '100%', opacity: .6}}>
-                <button className="myButton">
-                    <Link to='/Dashboard/Calender' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
-                        Calender
-                    <div>
-                        <img style={{ height: '20px'}} src={CalImg} />
-                    </div>  
-                    </Link>
-                </button>
-            </div>
-            <div style={{width: '100%', opacity: .6}}>
-                <button className="myButton">
-                    <Link to='/Dashboard/Map' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
-                        Map
+            <div className='buttons'>
+                <div style={{width: '100%', opacity: .6}}>
+                    <button className="myButton">
+                            <Link to='/Dashboard/Trips' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
+                                Trip
+                                <div>
+                                    <img style={{ height: '30px'}} src={suitcase} />
+                                </div>
+                            </Link>                     
+                    </button>
+                </div>
+                <div style={{width: '100%', opacity: .6}}>
+                    <button className="myButton">
+                        <Link to='/Dashboard/Plans' style={{display: 'block', height: '100%',textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
+                        
+                        Plans
                         <div>
-                            <img style={{ height: '20px'}} src={mapImg} />
-                        </div> 
-                    </Link>
-                </button >
-            </div>
-            <div style={{width: '100%', opacity: .6}}>
+                            <img style={{ height: '20px'}} src={notes} />
+                        </div>                   
+                        </Link>
+    
+                    </button>
+                </div>
+                <div style={{width: '100%', opacity: .6}}>
+                    <button className="myButton">
+                        <Link to='/Dashboard/Calender' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
+                            Calendar
+                        <div>
+                            <img style={{ height: '20px'}} src={CalImg} />
+                        </div>  
+                        </Link>
+                    </button>
+                </div>
+                <div style={{width: '100%', opacity: .6}}>
+                    <button className="myButton">
+                        <Link to='/Dashboard/Map' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
+                            Map
+                            <div>
+                                <img style={{ height: '20px'}} src={mapImg} />
+                            </div> 
+                        </Link>
+                    </button >
+                </div>
+                <div style={{width: '100%', opacity: .6}}>
                 <button className="myButton" >
                     <Link to='/' style={{display: 'block', height: '100%', textDecoration: 'none', color: '#05668d', fontSize: '18px' }}>
                         Logout
@@ -63,6 +64,7 @@ export default function Nav(){
                         </div> 
                     </Link>
                 </button>
+            </div>
             </div>
         </div>
     )

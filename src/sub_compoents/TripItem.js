@@ -1,5 +1,6 @@
 import React from 'react'
 import tree from './../images/palm-tree.png'
+import {Link} from 'react-router-dom'
 import './../styles/Trips.css'
 export default function TripItem(props){
 
@@ -22,8 +23,8 @@ export default function TripItem(props){
                 </div>
                 <div >
 
-                    <button className='myButton2' style={{opacity: .6}} onClick={ () => props.select(id, name)}>select</button>
-                    <button className='myButton2' style={{opacity: .6}} onClick={ () => props.deleteTrips(id)}>delete</button>
+                   <Link to='/Dashboard/Plans'> <button className='myButton2'  onClick={ () => props.select(id, name)}>select</button></Link>
+                    <button className='myButton2'  onClick={ () => props.deleteTrips(id)}>delete</button>
 
                 </div>
             </div>

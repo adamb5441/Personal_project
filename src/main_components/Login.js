@@ -15,10 +15,10 @@ class Login extends Component {
     }
   render() {
     return (
-      <div style={{width: '100%', height: "100vh", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <div className='beach' style={{width: '100%', height: "100vh", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <div className="card2">
             <div className="App-header" style={{fontSize: '35px', borderRadius: '10px'}}>
-              Trip-Planer
+              Trip-Planner
               <img src={tree} style={{height: '10vh'}}/>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', height: '100%'}}>

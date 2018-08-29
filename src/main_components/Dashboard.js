@@ -5,8 +5,10 @@ import Plans from './../sub_compoents/Plans'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {updateUserData} from './../ducks/users'
+import './../styles/clear.css'
 import Nav from './../sub_compoents/Nav'
 import './../styles/Dashboard.css'
+
 class Dashboard extends Component {
 
   componentDidMount(){
@@ -19,10 +21,9 @@ class Dashboard extends Component {
   render() {
     let {user} = this.props
     return (
-      <body style={{display: 'flex', flexDirection: 'column', backgroundColor: '#ebf2fa' }}>
+      <body style={{display: 'flex', flexDirection: 'column' }}>
           <Header />
           <div className="content">
-            <Nav />
             <div className="Info">  
               {this.props.children}
             </div>

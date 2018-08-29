@@ -21,3 +21,8 @@
     font-family: Oswald;
     width: 100%
   }
+  .beach{
+      background-image: url('https://images.pexels.com/photos/459522/pexels-photo-459522.jpeg?auto=compress&cs=tinysrgb&h=350');
+      background-repeat: no-repeat;
+      background-size: cover;
+  }

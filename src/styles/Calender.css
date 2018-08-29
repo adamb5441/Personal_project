@@ -3,13 +3,20 @@
     height: 50vh; 
     width: 50vh;
     
-}}
+}
+.formCard3{
+    width: 28vh;
+}
+}
 
 @media(min-width: 480px){
 .Calender{
     height: 60vh; 
     width: 110vh;
     
+}
+.formCard3{
+    width: 50vh;
 }
 }
 .formCard3{
@@ -19,8 +26,7 @@
     padding: 20px;
     margin-top: 5px;
     border-radius: 10px;
-    width: 28vh;
-    height: 15%;
+    height: 20%;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;

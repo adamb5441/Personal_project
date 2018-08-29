@@ -27,15 +27,20 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    background-color: white;
     background-size: cover;
-    overflow: none;
+    
+    background-position:center top fixed;
 }
 .myButton2{
-    background-color:  #427aa1;
+    background-color:  #3bacfc;
     border-radius: 10px;
     color: #ebf2fa; 
     font-size: 15px;
     font-family: Oswald;
-  
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
   }
+.myButton2:hover{
+    background-color:  #064a7a;
+}
