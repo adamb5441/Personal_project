@@ -15,7 +15,7 @@ class Login extends Component {
     }
   render() {
     return (
-      <div className='beach' style={{width: '100%', height: "100vh", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <div className='beach' style={{width: '100%', height: "100vh", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
         <div className="card2">
             <div className="App-header" style={{fontSize: '35px', borderRadius: '10px'}}>
               Trip-Planner
@@ -25,6 +25,13 @@ class Login extends Component {
               <button className="myButton3" style={{marginTop: '20px'}} onClick={this.login}>Login</button>
             </div>
         </div>
+        <div>
+          login to google with:
+        <p>
+          default login: defaultTP123@gmail.com
+          default password:TP123456
+        </p>
+      </div>
       </div>
     );
   }

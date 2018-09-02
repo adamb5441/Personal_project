@@ -40,12 +40,12 @@ export default class PlanItem extends Component{
         return(
         <div className='card3'>
             <div style={{ width: '103%'}}>
-             <button className='myButton2' onClick={ () => this.props.deletePlans(plan_id)}>X</button>
+             <button className='myButton2' style={{opacity: .6, float: 'right'}} onClick={ () => this.props.deletePlans(plan_id)}>X</button>
             </div>
             <div style={{height: '90%', width: '100%'}}>
              {this.state.show===1 ? display : info }
              </div>
-             <button className='myButton2' onClick={() => this.change()}>update</button>
+             <button style={{height: '42px'}} className='myButton2' onClick={() => this.change()}>update</button>
             
         </div>
     )}
