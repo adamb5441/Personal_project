@@ -25,13 +25,7 @@ class Login extends Component {
               <button className="myButton3" style={{marginTop: '20px'}} onClick={this.login}>Login</button>
             </div>
         </div>
-        <div>
-          login to google with:
-        <p>
-          default login: defaultTP123@gmail.com
-          default password:TP123456
-        </p>
-      </div>
+
       </div>
     );
   }
